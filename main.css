@@ -5,10 +5,60 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  background: url(/img/photo_5406925047970075609_w.jpg);
-  height: 100vh;
-  color: white;
+body{
+  background: url();
+}
+
+/* 1. Videoni butun ekranga yoyish */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Videoni cho'zilmasdan ekranni to'ldirishi uchun */
+    z-index: -1; /* Videoni hamma narsadan orqaga o'tkazadi */
+}
+
+/* 2. Oq blokni yo'qotish va header-ni shaffof qilish */
+.main-header {
+    background: rgba(255, 255, 255, 0.05); /* Juda kam miqdorda shaffoflik beradi */
+    backdrop-filter: blur(10px); /* Orqa fonni chiroyli xiralashtiradi */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: fixed; /* Sahifa aylanganda ham tepada turishi uchun */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Ingichka chegara */
+}
+
+/* 3. Logotip va matn ranglari (oq fonda ko'rinishi uchun) */
+.logo {
+    color: #00d2ff; /* Moviy rang */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 4. Tugmalar stili */
+.nav-links button {
+    background-color: #00d2ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+.family-info-header h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); 
 }
 
 .navbar {
@@ -19,6 +69,24 @@ body {
   background: rgba(255, 255, 255, 0.9);
 }
 
+.menu-btn {
+    background-color: #00d2ff; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-btn:hover {
+    background-color: #00b4db;
+    transform: scale(1.05);
+}
+.menu-btn:active {
+    transform: scale(0.9);
+    background-color: #0083b0;
+}
 .logo {
   color: #00a8ff;
   font-weight: bold;
@@ -94,49 +162,76 @@ nav button {
   height: 100%;
   object-fit: cover;
 }
-.family-section {
-  text-align: center;
-  padding: 50px 20px;
-  color: white;
+
+.family-info-header {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.family-section h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
+.family-info-header h1 {
+    color: #fff;
+    font-size: 32px;
 }
 
-.family-section .description {
-  font-size: 16px;
-  margin-bottom: 40px;
-  opacity: 0.9;
+.header-line {
+    width: 50px;
+    height: 3px;
+    background: #7209b7;
+    margin: 10px auto;
 }
 
-.family-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+/* Kartalar joylashuvi */
+.cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 320px;
+    perspective: 1000px;
 }
 
-.family-card {
-  width: 300px;
-  height: 350px;
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  background-color: #f0f0f0;
-  transition: transform 0.3s ease;
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
 }
 
-.family-card:hover {
-  transform: translateY(-10px);
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
 }
 
-.family-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(20%);
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.flip-card-back {
+    background-color: #3a0ca3;
+    color: white;
+    transform: rotateY(180deg); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
 }
 
 .card-overlay {
@@ -468,3 +563,4 @@ body {
   opacity: 0.7;
   margin-top: 20px;
 }
+
