@@ -9,41 +9,39 @@ body{
   background: url();
 }
 
-/* 1. Videoni butun ekranga yoyish */
+
 #bg-video {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Videoni cho'zilmasdan ekranni to'ldirishi uchun */
-    z-index: -1; /* Videoni hamma narsadan orqaga o'tkazadi */
+    object-fit: cover; 
+    z-index: -1;
 }
 
-/* 2. Oq blokni yo'qotish va header-ni shaffof qilish */
+
 .main-header {
-    background: rgba(255, 255, 255, 0.05); /* Juda kam miqdorda shaffoflik beradi */
-    backdrop-filter: blur(10px); /* Orqa fonni chiroyli xiralashtiradi */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    position: fixed; /* Sahifa aylanganda ham tepada turishi uchun */
+    position: fixed; 
     width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Ingichka chegara */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* 3. Logotip va matn ranglari (oq fonda ko'rinishi uchun) */
 .logo {
-    color: #00d2ff; /* Moviy rang */
+    color: #00d2ff; 
     font-size: 24px;
     font-weight: bold;
 }
 
-/* 4. Tugmalar stili */
 .nav-links button {
     background-color: #00d2ff;
     color: white;
