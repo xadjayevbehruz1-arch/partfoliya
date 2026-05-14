@@ -4,100 +4,182 @@
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.bg-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -10;
 
-body{
-  background: url();
+  background: linear-gradient(-45deg, #020024, #090979, #00d4ff, #6a00ff);
+
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* STARS */
+#stars,
+#stars2,
+#stars3 {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 1-layer */
+#stars {
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, white, transparent),
+    radial-gradient(2px 2px at 120px 130px, white, transparent),
+    radial-gradient(1px 1px at 200px 80px, white, transparent),
+    radial-gradient(2px 2px at 300px 200px, white, transparent);
+
+  background-size: 400px 400px;
+
+  animation: moveStars 80s linear infinite;
+  opacity: 0.7;
+}
+
+/* 2-layer */
+#stars2 {
+  background-image:
+    radial-gradient(1px 1px at 50px 60px, #00d4ff, transparent),
+    radial-gradient(2px 2px at 180px 90px, #8b5cf6, transparent),
+    radial-gradient(1px 1px at 250px 180px, white, transparent);
+
+  background-size: 600px 600px;
+
+  animation: moveStars 140s linear infinite;
+  opacity: 0.5;
+}
+
+/* 3-layer */
+#stars3 {
+  background-image:
+    radial-gradient(2px 2px at 100px 100px, white, transparent),
+    radial-gradient(2px 2px at 220px 220px, #00d4ff, transparent);
+
+  background-size: 800px 800px;
+
+  animation: moveStars 220s linear infinite;
+  opacity: 0.3;
+}
+
+/* Stars animation */
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-1000px);
+  }
 }
 /* Men haqimda bo'limi stillari */
 .about-section {
-    padding: 60px 0;
-    color: #fff;
-    text-align: center;
-    background: transparent; /* Fon rasmi ko'rinishi uchun */
+  padding: 60px 0;
+  color: #fff;
+  text-align: center;
+  background: transparent; /* Fon rasmi ko'rinishi uchun */
 }
 
 .section-title {
-    font-size: 36px;
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
+  font-size: 36px;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
 }
 
 /* Sarlavha ostidagi chiziq (oilam bo'limidagidek) */
 .section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: #a855f7; /* Binafsha rang */
-    margin: 10px auto 0;
-    border-radius: 2px;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #a855f7; /* Binafsha rang */
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.05); 
-    padding: 30px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .about-text p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    color: #e0e0e0;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #e0e0e0;
 }
 
 #bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-
 .main-header {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    position: fixed; 
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo {
-    color: #00d2ff; 
-    font-size: 24px;
-    font-weight: bold;
+  color: #00d2ff;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .nav-links button {
-    background-color: #00d2ff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-left: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
+  background-color: #00d2ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-
 .family-info-header h1 {
-    color: #ffffff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); 
+  color: #ffffff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .navbar {
@@ -109,22 +191,22 @@ body{
 }
 
 .menu-btn {
-    background-color: #00d2ff; 
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #00d2ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .menu-btn:hover {
-    background-color: #00b4db;
-    transform: scale(1.05);
+  background-color: #00b4db;
+  transform: scale(1.05);
 }
 .menu-btn:active {
-    transform: scale(0.9);
-    background-color: #0083b0;
+  transform: scale(0.9);
+  background-color: #0083b0;
 }
 .logo {
   color: #00a8ff;
@@ -203,74 +285,74 @@ nav button {
 }
 
 .family-info-header {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .family-info-header h1 {
-    color: #fff;
-    font-size: 32px;
+  color: #fff;
+  font-size: 32px;
 }
 
 .header-line {
-    width: 50px;
-    height: 3px;
-    background: #7209b7;
-    margin: 10px auto;
+  width: 50px;
+  height: 3px;
+  background: #7209b7;
+  margin: 10px auto;
 }
 
 /* Kartalar joylashuvi */
 .cards-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .flip-card {
-    background-color: transparent;
-    width: 250px;
-    height: 320px;
-    perspective: 1000px;
+  background-color: transparent;
+  width: 250px;
+  height: 320px;
+  perspective: 1000px;
 }
 
 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
 }
 
 .flip-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-
 .flip-card-back {
-    background-color: #3a0ca3;
-    color: white;
-    transform: rotateY(180deg); 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    text-align: center;
+  background-color: #3a0ca3;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
 }
 
 .card-overlay {
@@ -602,4 +684,3 @@ body {
   opacity: 0.7;
   margin-top: 20px;
 }
-
