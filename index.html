@@ -1,311 +1,230 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uz">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BEHRUZ Portfolio</title>
-    <link rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    
-    
-    <div class="bg-container">
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
-    </div>
-    <header class="main-header">
-      <div class="logo">xadjayev 🚀</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTech Premium v2.0</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
 
-      <nav class="button-class:hover">
-        <button>Men haqimda</button>
-        <button>Mening oilam</button>
-        <button>Mening guruhim</button>
-        <button>Mening loyihalarim</button>
-      </nav>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="navbar__logo">Nova<span>Tech</span></div>
+
+            <div class="navbar__overlay" id="navbarOverlay"></div>
+
+            <ul class="navbar__menu" id="navbarMenu">
+                <li><a href="#about" class="navbar__link">Biz haqimizda</a></li>
+                <li><a href="./2index.html" class="navbar__link">Yo'nalishlar</a></li>
+                <li><a href="/3index.html" class="navbar__link">Statistika</a></li>
+                <li><a href="/4index.html" class="navbar__link">Jamoa</a></li>
+                <li><a href="/5index.html" class="navbar__link">Aloqa</a></li>
+                <li><button class="btn btn--secondary">Kirish</button></li>
+            </ul>
+
+            <button class="navbar__burger" id="navbarBurger" aria-label="Menyu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        
+        <div class="hero__container">
+            <div class="hero__content">
+                <span class="badge">🚀 Yangi Avlod Akademiyasi</span>
+                <h1 class="hero__title">Kelajak Texnologiyalarini <span>Biz Bilan</span> O'rganing</h1>
+                <p class="hero__subtitle">Zamonaviy kasblarni eng kuchli mentorlardan professional muhitda o'rganing va o'z portfoliongizni yarating.</p>
+                <div class="hero__actions">
+                    <button class="btn btn--primary">Kurslarni ko'rish</button>
+                    <button class="btn btn--video">▶ Videoni ko'rish</button>
+                </div>
+            </div>
+            <div class="hero__image-box">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Tech Background" class="hero__img">
+            </div>
+        </div>
     </header>
-    <main class="hero">
-      <div class="hero-content">
-        <div class="text-side">
-          <h1>
-            Assalomu alaykum! <br />
-            Mening ismim <span>BEHRUZ</span>
-          </h1>
-          <p>
-            Men PDP Junior yashnabo tumanida frontent yo'nalishida o'qiyman.
-          </p>
-          <button class="btn-more">Men haqimda</button>
-        </div>
 
-        <div class="image-side">
-          <div class="profile-frame">
-            <img src="/img/photo_5386481965713790403_y.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </main>
-    <section class="about-section">
-      <div class="container">
-        <h2 class="section-title">Men haqimda</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>
-              Mening ismim Behruz Xadjayev <br />
-              2011-yillda toshkent shaharida <br>
-              tugulgan man va men 14-yoshman
-              va <br> men 204-maktab da 8-D sinfda oqiyman. <br />
-              
-
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="family-section">
-      <div class="family-info-header">
-        <h1>Mening oilam</h1>
-        <div class="header-line"></div>
-        <p>Biz oilada 3 kishi yashaymiz: Dadam, onam va men.</p>
-      </div>
-
-      <div class="cards-grid">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="/img/photo_5386405996332261060_y.jpg" alt="Dadam" />
+                            
+    <section id="about" class="about">
+        <div class="about__container">
+            <div class="about__image-box">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Biz haqimizda" class="about__img">
             </div>
-            <div class="flip-card-back">
-              <h3>Dadam</h3>
-              <p>
-                BU esa menig dadam ular yuktashuvch bolib ishlaydila ularning
-                yoshlarin 49 da ularning ismlarin SHuxrat .
-              </p>
+            <div class="about__content">
+                <h2 class="section-title">Biz haqimizda</h2>
+                <p class="about__text">NovaTech akademiyasi yoshlarga xalqaro standartlar asosida dasturlash va dizayn yo'nalishlarini o'rgatib kelmoqda. Bizning maqsadimiz — nazariya va amaliyotni birlashtirgan holda sizni tayyor mutaxassisga aylantirish.</p>
+                <button class="btn btn--primary">Batafsil</button>
             </div>
-          </div>
         </div>
-
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="/img/photo_5391094945273288147_y.jpg" alt="Onam" />
-            </div>
-            <div class="flip-card-back">
-              <h3>Onam</h3>
-              <p>
-                bu mening onam ularnign ism lari Gulnoza yoshlarini 46 ular kasir lar
-                klinikaga 
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section class="group" id="group">
-      <div class="container">
-        <h2 class="group-title">Mening guruhim</h2>
-        <div class="group-wrapper">
-          <input
-            class="slider-input"
-            id="s1"
-            type="radio"
-            name="slider"
-            checked
-          />
-          <input class="slider-input" id="s2" type="radio" name="slider" />
-          <input class="slider-input" id="s3" type="radio" name="slider" />
-          <input class="slider-input" id="s4" type="radio" name="slider" />
-          <input class="slider-input" id="s5" type="radio" name="slider" />
-          <input class="slider-input" id="s6" type="radio" name="slider" />
-
-          <div class="cards">
-            <label for="s1" id="slide1">
-              <div class="card">
-                <div class="image-box">
-                  <img
-                    class="card-pic"
-                    src="/img/IMG_20260411_164851.jpg"
-                    alt=""
-                  />
+    
+    <section id="services" class="services">
+        <h2 class="section-title section-title--center">Bizning Yo'nalishlar</h2>
+        <div class="services__grid">
+            
+            <div class="card-flip">
+                <div class="card-flip__inner">
+                    <div class="card-flip__front">
+                        <div class="card-flip__icon">💻</div>
+                        <h3>Frontend Dasturlash</h3>
+                    </div>
+                    <div class="card-flip__back">
+                        <h3>Frontend</h3>
+                        <p>HTML, CSS, JavaScript va React orqali chiroyli va interaktiv saytlar yaratishni o'rganasiz.</p>
+                    </div>
                 </div>
-                <div class="slide-info">
-                  <h3 class="slide-title">ASOMIDIN</h3>
-                  <p class="slide-desc"></p>
+            </div>
+        
+            <div class="card-flip">
+                <div class="card-flip__inner">
+                    <div class="card-flip__front">
+                        <div class="card-flip__icon">⚙️</div>
+                        <h3>Backend Dasturlash</h3>
+                    </div>
+                    <div class="card-flip__back">
+                        <h3>Backend</h3>
+                        <p>Node.js, Python va ma'lumotlar bazasi bilan ishlash, server xavfsizligini ta'minlash.</p>
+                    </div>
                 </div>
-              </div>
-            </label>
-
-            <label for="s2" id="slide2">
-              <div class="card">
-                <div class="image-box">
-                  <img
-                    class="card-pic"
-                    src="/img/IMG_20260411_165041.jpg"
-                    alt=""
-                  />
+            </div>
+            
+            <div class="card-flip">
+                <div class="card-flip__inner">
+                    <div class="card-flip__front">
+                        <div class="card-flip__icon">🎨</div>
+                        <h3>UI/UX Dizayn</h3>
+                    </div>
+                    <div class="card-flip__back">
+                        <h3>UI/UX Dizayn</h3>
+                        <p>Figma dasturida zamonaviy veb-saytlar va mobil ilovalar uchun interfeyslar chizish.</p>
+                    </div>
                 </div>
-                <div class="slide-info">
-                  <h3 class="slide-title">JASUR</h3>
-                  <p class="slide-desc"></p>
-                </div>
-              </div>
-            </label>
-
-            <label for="s3" id="slide3">
-              <div class="card">
-                <div class="image-box">
-                  <img
-                    class="card-pic"
-                    src="/img/IMG_20260411_165156.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="slide-info">
-                  <h3 class="slide-title">ABDURAXIM</h3>
-                  <p class="slide-desc"></p>
-                </div>
-              </div>
-            </label>
-
-            <label for="s4" id="slide4">
-              <div class="card">
-                <div class="image-box">
-                  <img
-                    class="card-pic"
-                    src="/img/IMG_20260411_165245.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="slide-info">
-                  <h3 class="slide-title">SHERZOD</h3>
-                  <p class="slide-desc"></p>
-                </div>
-              </div>
-            </label>
-
-            <label for="s5" id="slide5">
-              <div class="card">
-                <div class="image-box">
-                  <img
-                    class="card-pic"
-                    src="/img/IMG_20260411_165437 copy.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="slide-info">
-                  <h3 class="slide-title">BEHZOD</h3>
-                  <p class="slide-desc"></p>
-                </div>
-              </div>
-            </label>
-
-            <label for="s6" id="slide6">
-              <div class="card">
-                <div class="image-box">
-                  <img
-                    class="card-pic"
-                    src="/img/IMG_20260411_165437.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="slide-info">
-                  <h3 class="slide-title">BEHZOD</h3>
-                  <p class="slide-desc"></p>
-                </div>
-              </div>
-            </label>
-            <label for="s6" id="slide6">
-              <div class="card">
-                <div class="image-box">
-                  <img
-                    class="card-pic"
-                    src="/img/IMG_20260411_165600.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="slide-info">
-                  <h3 class="slide-title">SARDOR</h3>
-                  <p class="slide-desc"></p>
-                </div>
-              </div>
-            </label>
-            <label for="s6" id="slide6">
-              <div class="card">
-                <div class="image-box">
-                  <img
-                    class="card-pic"
-                    src="/img/IMG_20260411_165708.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="slide-info">
-                  <h3 class="slide-title">BEHRUZ</h3>
-                  <p class="slide-desc"></p>
-                </div>
-              </div>
-            </label>
-            <label for="s6" id="slide6">
-              <div class="card">
-                <div class="image-box">
-                  <img
-                    class="card-pic"
-                    src="/img/photo_5221935837254195771_y.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="slide-info">
-                  <h3 class="slide-title">OZOD</h3>
-                  <p class="slide-desc"></p>
-                </div>
-              </div>
-            </label>
-          </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="gallery">
-      <h1>Mening loyihalarim</h1>
-
-      <div class="images">
-        <a href="https://jocular-blini-b99857.netlify.app/">
-          <img class="img-card" src="/img/photo_5406925047970075581_w.jpg"
-        /></a>
-        <a href="https://jocular-blini-b99857.netlify.app/"
-          ><img class="img-card" src="/img/photo_5406925047970075568_w.jpg"
-        /></a>
-        <a href="https://jocular-blini-b99857.netlify.app/">
-          <img class="img-card" src="/img/photo_5406925047970075577_w.jpg"
-        /></a>
-      </div>
+    
+    <section id="stats" class="stats">
+        <div class="stats__item">
+            <h3 class="stats__number">1000+</h3>
+            <p class="stats__label">Bitiruvchilar</p>
+        </div>
+        <div class="stats__item">
+            <h3 class="stats__number">50+</h3>
+            <p class="stats__label">Mentorlar</p>
+        </div>
+        <div class="stats__item">
+            <h3 class="stats__number">95%</h3>
+            <p class="stats__label">Ishga joylashish</p>
+        </div>
     </section>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    
+    <section id="team" class="team">
+        <h2 class="section-title section-title--center">Bizning Mentorlar</h2>
+        <div class="team__grid">
+            <div class="team__member">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=250&h=250&q=80" alt="Mentor" class="team__img">
+                <h4 class="team__name">Asror Ibrohimov</h4>
+                <p class="team__role">Senior Frontend Engineer</p>
+            </div>
+            <div class="team__member">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=250&h=250&q=80" alt="Mentor" class="team__img">
+                <h4 class="team__name">Malika Alieva</h4>
+                <p class="team__role">Lead UI/UX Designer</p>
+            </div>
+            <div class="team__member">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=250&h=250&q=80" alt="Mentor" class="team__img">
+                <h4 class="team__name">Rustam Umarov</h4>
+                <p class="team__role">Senior Python Developer</p>
+            </div>
+        </div>
+    </section>
 
-    <footer class="footer">
-      <h2 class="footer-title">men bilan boglanishingiz mumkin 🚀</h2>
 
-      <nav class="footer-nav">
-        <a href="#">Men haqimda</a>
-        <a href="#">Oilam</a>
-        <a href="#">Guruhim</a>
-        <a href="#">Loyihalarim</a>
-      </nav>
+    <section class="testimonials">
+        <h2 class="section-title section-title--center">O'quvchilarimiz Fikri</h2>
+        <div class="testimonials__grid">
+            <div class="testimonials__card">
+                <p class="testimonials__text">"NovaTech-da o'qib, o'z portfoliomni yig'dim va kurs tugamasidanoq studio loyihalarida frontend dasturchi bo'lib ish boshladim!"</p>
+                <h5 class="testimonials__author">- Sardorbek Rahimov</h5>
+            </div>
+            <div class="testimonials__card">
+                <p class="testimonials__text">"Darslar mutlaqo amaliyotga asoslangan. Mentorlar har bir klass nomidan tortib murakkab 3D effektlargacha erinmay o'rgatishdi."</p>
+                <h5 class="testimonials__author">- Dilnoza Toshmatova</h5>
+            </div>
+        </div>
+    </section>
 
-      <div class="social-icons">
-        <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
-
-        <a href="#" class="icon telegram"
-          ><i class="fab fa-telegram-plane"></i
-        ></a>
-        <a href="#" class="icon github"><i class="fab fa-github"></i></a>
-      </div>
-
-      <p class="copyright">© 2026 BEHRUZ · Portfolio loyihasi</p>
+    
+    <footer id="contact" class="footer">
+        <div class="footer__container">
+            <div class="footer__info">
+                <h3 class="footer__logo">Nova<span>Tech</span></h3>
+                <p>Kelajakni bugun biz bilan quring. Savollaringiz bo'lsa, xabar qoldiring.</p>
+                <p>📍 Toshkent sh., Chilonzor t.</p>
+                <p>📞 +998 (50) 101 90 52</p>
+            </div>
+            <form class="footer__form">
+                <h4>Bizga yozing</h4>
+                <input type="text" placeholder="Ismingiz" class="footer__input" required>
+                <input type="email" placeholder="Emailingiz" class="footer__input" required>
+                <textarea placeholder="Xabaringiz" class="footer__textarea" rows="4" required></textarea>
+                <button type="submit" class="btn btn--primary">Yuborish</button>
+            </form>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 NovaTech. Barcha huquqlar himoyalangan.</p>
+        </div>
     </footer>
-  </body>
+
+    <script>
+        (function () {
+            var burger = document.getElementById('navbarBurger');
+            var menu = document.getElementById('navbarMenu');
+            var overlay = document.getElementById('navbarOverlay');
+            var body = document.body;
+
+            function openMenu() {
+                menu.classList.add('is-open');
+                overlay.classList.add('is-open');
+                burger.classList.add('is-active');
+                burger.setAttribute('aria-expanded', 'true');
+                body.classList.add('menu-open');
+            }
+
+            function closeMenu() {
+                menu.classList.remove('is-open');
+                overlay.classList.remove('is-open');
+                burger.classList.remove('is-active');
+                burger.setAttribute('aria-expanded', 'false');
+                body.classList.remove('menu-open');
+            }
+
+            burger.addEventListener('click', function () {
+                if (menu.classList.contains('is-open')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+
+            overlay.addEventListener('click', closeMenu);
+
+            menu.querySelectorAll('.navbar__link').forEach(function (link) {
+                link.addEventListener('click', closeMenu);
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) {
+                    closeMenu();
+                }
+            });
+        })();
+    </script>
+
+</body>
 </html>
